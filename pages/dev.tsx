@@ -11,6 +11,7 @@ const Dev: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <div className="dark:bg-gray">Lol</div>
     </>
   );
 };
