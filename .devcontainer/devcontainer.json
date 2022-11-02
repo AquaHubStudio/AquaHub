@@ -27,5 +27,5 @@
     "prisma.prisma",
     "bradlc.vscode-tailwindcss"
   ],
-  "postCreateCommand": "yarn install --ignore-engines"
+  "postCreateCommand": "yarn install"
 }

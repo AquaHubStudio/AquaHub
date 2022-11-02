@@ -23,7 +23,7 @@ RUN apt-get update \
 ENV DEBIAN_FRONTEND=dialog
 
 COPY ./package.json ./
-RUN yarn install --ignore-engines
+RUN yarn install
 COPY . .
 RUN yarn run build
 
