@@ -25,8 +25,7 @@ ENV DEBIAN_FRONTEND=dialog
 COPY ./package.json ./
 RUN yarn install
 COPY . .
-RUN yarn run build
 
 EXPOSE 3000
 
-CMD npm start
+CMD yarn run dev
