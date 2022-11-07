@@ -26,7 +26,7 @@ export default function RedirectPage({ searchParams }: any) {
   }
 
   const loginUser = async () => {
-    await db.admins.authViaEmail('jannis@milz.ch', 'tvx.ear8pjb0hpr*MNQ');
+    await db.admins.authViaEmail(); // TODO: add credentials from environment variables
 
     const loginRes = await db.users.authViaOAuth2(
       authProvider.name,
