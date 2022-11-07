@@ -1,11 +1,27 @@
+'use client';
 import PocketBase from 'pocketbase';
+import { useEffect, useState } from 'react';
 
-const db = new PocketBase('http://pocketbase:8090');
+const db = new PocketBase('http://localhost:8090');
 
-export default async function ProjectsPage() {
-  await db.admins.authViaEmail(process.env.POCKETBASE_USERNAME || '', process.env.POCKETBASE_PASSWORD || '');
+export default function ProjectsPage() {
+  const [profiles, setProfiles] = useState(db.records.getFullList('profiles') ?? 'Crazy');
 
-  const data = await db.records.getFullList('projects');
+  // async function test() {
+  //   const result = await db.records.getFullList('profiles');
+  //   // const result = await fetch('http://localhost:8090/api/collections/profiles/records?page=1&perPage=100');
 
-  return <div>Hopefully soon some data: {JSON.stringify(data)}</div>;
+  //   setProfiles(JSON.stringify(result));
+  // }
+  // const user = db.authStore.model;
+
+  return (
+    <div>
+      <p>User: {JSON.stringify(db.authStore.model)}</p>
+      {/* <button onClick={test}>Load data</button> */}
+      <p>Fetch: {JSON.stringify(profiles)}</p>
+      {/* <p>Hopefully soon some data: {JSON.stringify(data)}</p>
+      <p>Your user: {JSON.stringify(user)}</p> */}
+    </div>
+  );
 }
