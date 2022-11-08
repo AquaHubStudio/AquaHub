@@ -25,7 +25,9 @@
     "vscode.css-language-features",
     "formulahendry.auto-rename-tag",
     "prisma.prisma",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    "svelte.svelte-vscode",
+    "ardenivanov.svelte-intellisense"
   ],
   "postCreateCommand": "yarn install"
 }
