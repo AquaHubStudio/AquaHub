@@ -13,10 +13,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "[css]": {
-      "editor.defaultFormatter": "vscode.css-language-features"
-    }
+    "files.trimTrailingWhitespace": true
   },
   "extensions": [
     "eamodio.gitlens",
@@ -24,7 +21,6 @@
     "ms-azuretools.vscode-docker",
     "vscode.css-language-features",
     "formulahendry.auto-rename-tag",
-    "prisma.prisma",
     "bradlc.vscode-tailwindcss",
     "svelte.svelte-vscode",
     "ardenivanov.svelte-intellisense"
