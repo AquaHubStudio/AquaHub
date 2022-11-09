@@ -8,4 +8,5 @@
 
 <section>
 	<h1>Hello</h1>
+	<img src="images/logo.png" alt="AquaHub logo" />
 </section>
