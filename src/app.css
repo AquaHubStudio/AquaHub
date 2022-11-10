@@ -1,3 +1,8 @@
+@import 'material-icons/iconfont/material-icons.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+	@apply bg-gray-200 h-full w-full;
+}

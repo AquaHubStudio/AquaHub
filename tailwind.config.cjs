@@ -13,7 +13,13 @@ module.exports = {
 				white: '#FAFAFA',
 				black: '#1C1F21',
 			},
+			gridTemplateColumns: {
+				projects: 'repeat(auto-fill,minmax(340px, 1fr))',
+			},
+			gridTemplateRows: {
+				projects: 'repeat(auto-fill,minmax(1fr))',
+			},
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/line-clamp')],
 };

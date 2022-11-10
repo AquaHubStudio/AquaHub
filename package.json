@@ -17,6 +17,7 @@
 		"@playwright/test": "1.25.0",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
+		"@tailwindcss/line-clamp": "^0.4.2",
 		"@types/cookie": "^0.5.1",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
 		"@typescript-eslint/parser": "^5.27.0",
@@ -37,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"material-icons": "^1.12.1",
 		"pocketbase": "^0.7.4"
 	}
 }
