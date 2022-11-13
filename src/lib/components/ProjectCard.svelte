@@ -6,18 +6,21 @@
 	export let progress: number;
 </script>
 
-<div class="bg-gray-300 p-2.5 rounded-md m-4 shadow-md">
+<div class="bg-gray-100 p-3 rounded-md m-4 shadow-md">
 	<div class="flex">
 		<img src={image} alt="Project logo" class="w-20 h-20 rounded-md" />
 		<div class="px-4">
-			<p class="text-lg font-semibold">{title}</p>
-			<p class="text-gray-500 max-h-20 line-clamp-3 overflow-hidden overflow-ellipsis text-sm">{description}</p>
+			<p class="text-md font-semibold">{title}</p>
+			<p class="text-gray-500 max-h-20 line-clamp-3 overflow-hidden overflow-ellipsis text-xs">{description}</p>
 		</div>
 	</div>
-	<div class="flex items-center gap-2 md:items-start md:flex-col pt-2.5 md:pt-0">
-		<div class="flex md:pt-2.5">
+	<div class="flex items-center gap-1 md:items-start md:flex-col pt-2.5 md:pt-0 mt-2">
+		<div class="flex md:pt-2">
 			{#each tags as tag}
-				<p class="text-xs rounded-full mr-1.5 px-4 py-0.5 bg-slate-400">{tag}</p>
+				<p class={`flex items-center gap-1 text-xs rounded-full mr-1.5 px-3 py-0.5 text-gray-700 bg-gray-200`}>
+					<span class="material-icons-round text-xs">sell</span>
+					{tag}
+				</p>
 			{/each}
 		</div>
 		<div class="flex w-full items-center">
