@@ -5,9 +5,9 @@
 </script>
 
 <div class="app">
-	<Header />
+	<Header maxWidth="landing" />
 	<main>
 		<slot />
 	</main>
-	<Footer />
+	<Footer maxWidth="landing" />
 </div>
