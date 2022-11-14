@@ -3,8 +3,8 @@
 </script>
 
 <div class="flex items-center">
-	<img src="images/logo.png" alt="AquaHub logo" class="w-12 h-12" />
+	<img src="images/logo.png" alt="AquaHub logo" class="h-12 w-12" />
 	{#if title}
-		<p class="pl-2 text-md font-medium text-black">AquaHub</p>
+		<p class="text-md pl-2 font-medium text-black">AquaHub</p>
 	{/if}
 </div>
