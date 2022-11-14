@@ -8,7 +8,6 @@ services:
     environment:
       - APP_ENV=local
       - APP_DEBUG=true
-      - POCKETBASE_URL=http://pocketbase:8090
     volumes:
       - ..:/workspace:cached
       - vendor:/workspace/vendor:cached
