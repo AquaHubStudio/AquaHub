@@ -19,6 +19,9 @@ module.exports = {
 			gridTemplateRows: {
 				projects: 'repeat(auto-fill,minmax(1fr))',
 			},
+			maxWidth: {
+				landing: '1200px',
+			},
 		},
 	},
 	plugins: [require('@tailwindcss/line-clamp')],
