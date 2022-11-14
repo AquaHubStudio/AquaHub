@@ -11,7 +11,7 @@
 <section class="m-auto max-w-landing">
 	<div class="flex h-[calc(90vh-64px)] w-full flex-col items-center justify-center text-center">
 		<h1
-			class="bg-gradient-to-r from-blue-400 to-violet-600 bg-clip-text text-8xl font-semibold leading-tight text-white text-transparent"
+			class="bg-gradient-to-r from-blue-400 to-violet-600 bg-clip-text text-8xl font-bold leading-tight text-white text-transparent"
 		>
 			One Hub. Every Project.
 		</h1>
@@ -31,18 +31,18 @@
 	</div>
 	<FeatureDescription
 		image="https://picsum.photos/400"
-		title="Some title"
+		title="Discover projects from others"
 		description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam repellendus, hic cum magnam praesentium rem quis nisi. Nostrum minus id numquam eius alias eaque quibusdam. Suscipit repellat incidunt amet modi."
 	/>
 	<FeatureDescription
 		image="https://picsum.photos/400"
-		title="Some title"
+		title="Connect with like-minded people"
 		description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam repellendus, hic cum magnam praesentium rem quis nisi. Nostrum minus id numquam eius alias eaque quibusdam. Suscipit repellat incidunt amet modi."
 		reversed
 	/>
 	<FeatureDescription
 		image="https://picsum.photos/400"
-		title="Some title"
+		title="Track your progress"
 		description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam repellendus, hic cum magnam praesentium rem quis nisi. Nostrum minus id numquam eius alias eaque quibusdam. Suscipit repellat incidunt amet modi."
 	/>
 </section>
