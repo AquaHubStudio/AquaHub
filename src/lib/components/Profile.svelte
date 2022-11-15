@@ -10,7 +10,7 @@
 	{/if}
 
 	<p class="flex items-center pl-2 text-black">
-		<span class="hidden md:inline-block">Jannis Milz</span>
+		<span class="hidden md:inline-block">Your Name</span>
 		<span class="material-icons-round">keyboard_arrow_down</span>
 	</p>
 </div>
