@@ -15,6 +15,12 @@
 			ddOpen = false;
 		}
 	};
+
+	const logout = () => {
+		localStorage.removeItem('provider');
+		localStorage.removeItem('pocketbase_auth');
+		location.reload();
+	};
 </script>
 
 <div>
@@ -41,7 +47,9 @@
 					<a href="#" class="block px-4 py-2 text-sm text-gray-700 duration-200 hover:text-gray-500">My Projects</a>
 				</div>
 				<div class="py-1" role="none">
-					<a href="#" class="block px-4 py-2 text-sm text-red-500 duration-200 hover:text-red-400">Sign out</a>
+					<button on:click={logout} class="block px-4 py-2 text-sm text-red-500 duration-200 hover:text-red-400"
+						>Sign out</button
+					>
 				</div>
 			</div>
 		</div>
