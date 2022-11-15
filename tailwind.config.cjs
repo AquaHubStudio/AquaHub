@@ -21,6 +21,7 @@ module.exports = {
 			},
 			maxWidth: {
 				landing: '1200px',
+				projects: '1500px',
 			},
 		},
 	},
