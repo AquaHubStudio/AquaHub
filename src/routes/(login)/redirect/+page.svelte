@@ -8,7 +8,7 @@
 
 	if (browser) {
 		const authProvider = JSON.parse(window.localStorage.getItem('provider') || '{}');
-
+		localStorage.removeItem('provider');
 		if (!authProvider) {
 			goto('/');
 		} else {
