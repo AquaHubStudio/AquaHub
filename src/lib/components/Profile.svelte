@@ -43,7 +43,10 @@
 				} right-0 z-10 mt-2 w-48 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
 			>
 				<div class="py-1" role="none">
-					<a href="#" class="block px-4 py-2 text-sm text-gray-700 duration-200 hover:text-gray-500">My Projects</a>
+					<a
+						href={`/users/${db.authStore.model?.id}`}
+						class="block px-4 py-2 text-sm text-gray-700 duration-200 hover:text-gray-500">Profile</a
+					>
 				</div>
 				<div class="py-1" role="none">
 					<button on:click={logout} class="block px-4 py-2 text-sm text-red-500 duration-200 hover:text-red-400"
