@@ -26,6 +26,8 @@
 							avatar: signInRes.meta.avatarUrl,
 						})
 						.then(() => {
+							// Update authStore after updated user
+							db.users.refresh();
 							goto('/');
 						});
 				});
