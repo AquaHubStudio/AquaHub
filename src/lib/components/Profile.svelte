@@ -4,7 +4,7 @@
 
 	const db = new PocketBase(import.meta.env.VITE_POCKETBASE_URL);
 
-	let ddOpen = true;
+	let ddOpen = false;
 
 	const handleDdClick = () => {
 		ddOpen = !ddOpen;
@@ -17,8 +17,7 @@
 	};
 
 	const logout = () => {
-		localStorage.removeItem('provider');
-		localStorage.removeItem('pocketbase_auth');
+		db.authStore.clear();
 		location.reload();
 	};
 </script>
