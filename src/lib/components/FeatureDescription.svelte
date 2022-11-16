@@ -5,7 +5,7 @@
 	export let description: string;
 </script>
 
-<div class="mb-16">
+<div class="mx-12 mb-16">
 	<div class={`flex ${reversed ? 'flex-row-reverse' : ''} items-center justify-between gap-24`}>
 		<img src={image} alt="Example" />
 		<div>
