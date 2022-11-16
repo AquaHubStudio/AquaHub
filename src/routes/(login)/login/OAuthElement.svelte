@@ -20,10 +20,10 @@
 </script>
 
 <button
-	class="flex items-center w-full justify-center py-2 rounded-md border-2 border-gray-200"
+	class="flex w-full items-center justify-center rounded-md border-2 border-gray-200 py-2 duration-100 hover:bg-gray-100"
 	on:click={redirectLogin}
 >
-	<div class="w-7 h-7">
+	<div class="h-7 w-7">
 		{#if provider === 'google'}
 			<svg
 				class="eUuXwBkW5W4__eatjSfd RRXFBumaW2SHdseZaWm6 _gmxfZ2BpOHxa6nWwqBB"
