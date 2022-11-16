@@ -1,5 +1,4 @@
-<script>
-	import FeatureDescription from '$lib/components/FeatureDescription.svelte';
+<script lang="ts">
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 </script>
 
@@ -30,7 +29,6 @@
 			title="Test Title"
 			description="Some description for this project so lets type here some more text and hope for the best. I try to write even longer description. I need to find the matching best length."
 			tags={[{ title: 'Tag1' }, { title: 'Tag2' }]}
-			progress={23}
 		/>
 		<ProjectCard
 			id="cl123"
@@ -38,7 +36,6 @@
 			title="Test Title"
 			description="Some description for this project so lets type here some more text and hope for the best. I try to write even longer description. I need to find the matching best length."
 			tags={[{ title: 'Tag1' }, { title: 'Tag2' }]}
-			progress={23}
 		/>
 		<ProjectCard
 			id="cl123"
@@ -46,7 +43,6 @@
 			title="Test Title"
 			description="Some description for this project so lets type here some more text and hope for the best. I try to write even longer description. I need to find the matching best length."
 			tags={[{ title: 'Tag1' }, { title: 'Tag2' }]}
-			progress={11}
 		/>
 		<ProjectCard
 			id="cl123"
@@ -54,7 +50,6 @@
 			title="Test Title"
 			description="Some description for this project so lets type here some more text and hope for the best. I try to write even longer description. I need to find the matching best length."
 			tags={[{ title: 'Tag1' }, { title: 'Tag2' }]}
-			progress={46}
 		/>
 		<ProjectCard
 			id="cl123"
@@ -62,7 +57,6 @@
 			title="Test Title"
 			description="Some description for this project so lets type here some more text and hope for the best. I try to write even longer description. I need to find the matching best length."
 			tags={[{ title: 'Tag1' }, { title: 'Tag2' }]}
-			progress={85}
 		/>
 	</div>
 </section>

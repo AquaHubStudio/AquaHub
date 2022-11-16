@@ -4,7 +4,6 @@
 	export let title: string;
 	export let description: string;
 	export let tags: { title: string }[];
-	export let progress: number;
 </script>
 
 <div class="m-4 rounded-md bg-gray-100 p-3 shadow-md">
@@ -23,12 +22,6 @@
 					{tag.title}
 				</p>
 			{/each}
-		</div>
-		<div class="flex w-full items-center">
-			<div class="h-2.5 w-full rounded-full bg-gray-200">
-				<div class="h-2.5 rounded-full bg-blue-500" style={`width: ${progress}%;`} />
-			</div>
-			<span class="pl-2 text-sm text-gray-600">{progress}%</span>
 		</div>
 	</div>
 </div>
