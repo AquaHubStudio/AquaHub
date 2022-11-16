@@ -29,7 +29,7 @@
 				{#if db.authStore.model?.profile.avatar}
 					<img src={db.authStore.model.profile.avatar} alt="Profile avatar" class="h-8 w-8 rounded-full" />
 				{:else}
-					<img src="/images/no-avatar.svg" alt="Profile avatar" class="h-8 w-8 rounded-full" />
+					<img src="/assets/no-avatar.svg" alt="Profile avatar" class="h-8 w-8 rounded-full" />
 				{/if}
 				<button on:click={handleDdClick} class="flex items-center pl-2 text-black duration-200 hover:text-gray-600">
 					<span class="hidden md:inline-block">{db.authStore.model?.profile.name}</span>
