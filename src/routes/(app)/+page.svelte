@@ -16,7 +16,7 @@
 			One Hub. Every Project.
 		</h1>
 		<h5 class="text-xl italic text-gray-600">
-			Share your project. Connect with like-minded founders. Track your progress.
+			Share your project. Connect with like-minded founders. Track your progress (coming soon).
 		</h5>
 		<div class="m-4 flex gap-4">
 			<a href="/discover" class="CtA-btn bg-gray-300 text-black hover:bg-gray-400 hover:bg-opacity-50">
@@ -42,7 +42,7 @@
 	/>
 	<FeatureDescription
 		image="https://picsum.photos/400"
-		title="Track your progress"
+		title="Track your progress (coming soon)"
 		description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam repellendus, hic cum magnam praesentium rem quis nisi. Nostrum minus id numquam eius alias eaque quibusdam. Suscipit repellat incidunt amet modi."
 	/>
 </section>
