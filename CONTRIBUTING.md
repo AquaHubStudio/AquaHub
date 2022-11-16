@@ -5,7 +5,7 @@ All contributions are welcome, including updates, issues, documentation and blog
 
 - [🛠️ Setup Development Environment](#setup-development-environment)
 - [⚙️ Configure Backend](#configure-backend)
-- [📥 Pull Request Policy](#📥-pull-request-policy)
+- [📥 Pull Request Policy](#-pull-request-policy)
 - [📂 File Structure](#file-structure)
 - [✅ Tests](#tests)
 - [💪 Other Ways to Help](#other-ways-to-help)
