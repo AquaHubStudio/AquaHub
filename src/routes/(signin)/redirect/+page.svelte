@@ -19,11 +19,11 @@
 					authProvider.codeVerifier,
 					import.meta.env.VITE_REDIRECT_URL,
 				)
-				.then((loginRes) => {
+				.then((signInRes) => {
 					db.records
-						.update('profiles', loginRes.user.profile?.id || '', {
-							name: loginRes.meta.name,
-							avatar: loginRes.meta.avatarUrl,
+						.update('profiles', signInRes.user.profile?.id || '', {
+							name: signInRes.meta.name,
+							avatar: signInRes.meta.avatarUrl,
 						})
 						.then(() => {
 							goto('/');
@@ -34,7 +34,7 @@
 </script>
 
 <svelte:head>
-	<title>Login</title>
+	<title>Redirect</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 

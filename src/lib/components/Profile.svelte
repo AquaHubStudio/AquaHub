@@ -54,6 +54,6 @@
 			</div>
 		</div>
 	{:else}
-		<a href="/login" class="duration-100 hover:opacity-70">Login</a>
+		<a href="/signin" class="duration-100 hover:opacity-70">Sign in</a>
 	{/if}
 </div>

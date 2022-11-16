@@ -7,7 +7,7 @@
 	const db = new PocketBase(import.meta.env.VITE_POCKETBASE_URL);
 	const providerCap = provider[0].toUpperCase() + provider.substr(1).toLowerCase();
 
-	const redirectLogin = async () => {
+	const redirectSignIn = async () => {
 		const { authProviders } = await db.users.listAuthMethods();
 		authProviders.forEach(function (method) {
 			if (method.name == provider) {
@@ -21,7 +21,7 @@
 
 <button
 	class="flex w-full items-center justify-center rounded-md border-2 border-gray-200 py-2 duration-100 hover:bg-gray-100"
-	on:click={redirectLogin}
+	on:click={redirectSignIn}
 >
 	<div class="h-7 w-7">
 		{#if provider === 'google'}
