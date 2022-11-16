@@ -4,15 +4,16 @@
     </a>
 </p>
 
-[AquaHub](https://aquahub.studio) is an open source network built using [Svelte Kit](https://github.com/sveltejs/kit) as its frontend and [PocketBase](https://github.com/pocketbase/pocketbase) as its backend. The project's goal is to enable people to **share, discover and collaborate** on software projects through an easy and intuitive UI.
-> ⚠️ Please keep in mind that AquaHub is currently in alpha version. Many features are missing and bugs are expected to happen.
+[AquaHub](https://aquahub.studio) is an open source network built using [Svelte Kit](https://github.com/sveltejs/kit) as its frontend and [PocketBase](https://github.com/pocketbase/pocketbase) as its backend. The project's goal is to enable people from all around the world to **share, discover and collaborate** on software projects through an easy and intuitive UI.
+> ⚠️ Please keep in mind that AquaHub is currently in alpha version. Many features are missing and critical bugs are expected.
 
-## Installation
-To install your own instance of AquaHub, you will first have to setup PocketBase:
+## 🚀 Our mission
+Our mission is to empower everyone to make their vision become reality. AquaHub provides a platform for new **and** experienced project founders to share their projects, connect with other like-minded people and celebrate their success with the community. Everyone on the platform is able to share their opinions and ideas with you to help you build the best project as possible. We offer a friendly and hate-free atmosphere where everyone is welcome and everyones opinion matters.
 
-1. 
+## Connect with us
+Join our 💻 [Discord](https://https://discord.gg/PDWbT7DkPU) for more information about updates and events.
 
-## Constribute
+## 👷 Development Guide
 AquaHub is a community driven project and we appreciate every help we can get:
 - You can suggest new features or report bugs [here](https://github.com/AquaHubStudio/AquaHub/issues).
-- Please read the [Constributing guide]() before constributing code.
+- Please read the [Contributing guide](Contributing.md) before constributing to the code.
