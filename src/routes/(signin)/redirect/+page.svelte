@@ -4,7 +4,7 @@
 	import { page } from '$app/stores';
 	import PocketBase from 'pocketbase';
 
-	const db = new PocketBase(import.meta.env.VITE_POCKETBASE_URL);
+	const db = new PocketBase(import.meta.env.VITE_SERVER_URL);
 
 	if (browser) {
 		const authProvider = JSON.parse(window.localStorage.getItem('provider') || '{}');

@@ -8,20 +8,17 @@ services:
     environment:
       - APP_ENV=staging
       - APP_DEBUG=false
-      - VITE_POCKETBASE_URL=
+      - VITE_SERVER_URL=
       - VITE_REDIRECT_URL=
     ports:
       - '5173:5173'
     volumes:
       - ..:/workspace:cached
       - vendor:/workspace/vendor:cached
-      - ${HOME}${USERPROFILE:-}/.ssh:/root/.ssh
-      - ${HOME}${USERPROFILE:-}/.gitconfig:/root/.gitconfig
-      - ${HOME}${USERPROFILE:-}/.gitignore_global:/root/.gitignore_global
-    depends_on: [pocketbase]
-    command: sleep infinity
+    depends_on: [server]
+    command: /workspace/wait-for-server.sh sleep infinity
 
-  pocketbase:
+  server:
     image: ghcr.io/muchobien/pocketbase:latest
     container_name: aquahub_pocketbase
     restart: unless-stopped
