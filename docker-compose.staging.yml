@@ -6,10 +6,10 @@ services:
       context: ..
       dockerfile: .devcontainer/Dockerfile
     environment:
-      - APP_ENV=local
-      - APP_DEBUG=true
-      - VITE_POCKETBASE_URL=http://localhost:8090
-      - VITE_REDIRECT_URL=http://localhost:5173/redirect
+      - APP_ENV=staging
+      - APP_DEBUG=false
+      - VITE_POCKETBASE_URL=
+      - VITE_REDIRECT_URL=
     volumes:
       - ..:/workspace:cached
       - vendor:/workspace/vendor:cached
