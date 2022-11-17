@@ -4,7 +4,7 @@ We ❤️ contributions to AquaHub to help make it better!
 All contributions are welcome, including updates, issues, documentation and blog posts as well.
 
 - [🛠️ Setup Development Environment](#%EF%B8%8F-setup-development-environment)
-- [⚙️ Configure Backend (PocketBase)](#%EF%B8%8F-configure-pocketbase-backend)
+- [⚙️ Configure Backend (PocketBase)](#%EF%B8%8F-configure-backend-pocketbase)
 - [📥 Pull Request Policy](#-pull-request-policy)
 - [📂 File Structure](#-file-structure)
 - [✅ Tests](#-tests)
