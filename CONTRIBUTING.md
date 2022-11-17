@@ -4,7 +4,7 @@ We ❤️ contributions to AquaHub to help make it better!
 All contributions are welcome, including updates, issues, documentation and blog posts as well.
 
 - [🛠️ Setup Development Environment](#-setup-development-environment)
-- [⚙️ Configure PocketBase (Backend)](#-configure-pocketbase-backend)
+- [⚙️ Configure Backend (PocketBase)](#-configure-pocketbase-backend)
 - [📥 Pull Request Policy](#-pull-request-policy)
 - [📂 File Structure](#-file-structure)
 - [✅ Tests](#-tests)
@@ -47,7 +47,7 @@ $ git checkout -b [name_of_your_new_branch]
 
 6. If you're ready to create a **Pull Request** check out [📥 Pull Request Policy](#-pull-request-policy)
 
-## ⚙️ Configure PocketBase (Backend)
+## ⚙️ Configure Backend (PocketBase)
 
 In the Backend we use [PocketBase](https://pocketbase.io). It's a _Backend-as-a-Service_ that covers all our current needs for the beginning.
 
