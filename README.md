@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://aquahub.studio" target="_blank" rel="noopener">
-        <img src="static/images/BannerMixed.png" alt="AquaHub - The network for projects" />
+        <img src="static/assets/BannerMixed.png" alt="AquaHub - The network for projects" />
     </a>
 </p>
 
