@@ -23,8 +23,6 @@ services:
     image: ghcr.io/muchobien/pocketbase:latest
     container_name: aquahub_pocketbase
     restart: unless-stopped
-    ports:
-      - '8090:8090'
     volumes:
       - ./data/db:/pb_data
 
