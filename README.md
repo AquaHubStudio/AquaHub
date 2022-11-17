@@ -8,13 +8,13 @@
 > ⚠️ Please keep in mind that AquaHub is currently in alpha version. Many features are missing and critical bugs are expected.
 
 ## 🚀 Our mission
-Our mission is to empower everyone to make their vision become reality. AquaHub provides a platform for new **and** experienced project founders to share their projects, connect with other like-minded people and celebrate your success with the community. Everyone on the platform is able to share their opinions and ideas with you to help you build the best project possible. We offer a **friendly and hate-free atmosphere** where everyone is welcome and everyones opinion matters.
+Our mission is to empower everyone to make their vision become reality. AquaHub provides a platform for new **and** experienced project founders to share their projects, connect with other like-minded people and celebrate your success with the community. Everyone on the platform is able to share their opinions and ideas with you to help you build the best project possible. We offer a **friendly and hate-free atmosphere** where everyone is welcome and everyone's opinion matters.
 
 ## 🚢 Connect with us
 - Join our 💻 [Discord](https://https://discord.gg/PDWbT7DkPU) for more information about updates and events.
 - You can find our Roadmap [here]()
 
 ## 👷 Development Guide
-AquaHub is a community driven project and we appreciate every help we can get:
+AquaHub is a community driven project, and we appreciate every help we can get:
 - You can suggest new features or report bugs [here](https://github.com/AquaHubStudio/AquaHub/issues).
-- Please read the [Contributing guide](Contributing.md) before constributing to the code.
+- Please read the [contributing guide](Contributing.md) before contributing to the code.
