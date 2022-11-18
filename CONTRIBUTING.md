@@ -1,7 +1,7 @@
 # Contributing
 
 We ❤️ contributions to AquaHub to help make it better!
-All contributions are welcome, including updates, issues, documentation and blog posts as well.
+All contributions are welcome, including updates, [issue](https://github.com/AquaHubStudio/AquaHub/issues), documentation and blog posts as well.
 
 - [🛠️ Setup Development Environment](#%EF%B8%8F-setup-development-environment)
 - [⚙️ Configure Backend (PocketBase)](#%EF%B8%8F-configure-backend-pocketbase)
@@ -152,10 +152,6 @@ $ git push origin [name_of_your_new_branch]
 ├── tests # UI tests
 ```
 
-## ✅ Tests
-
-_Coming soon_
-
 ## 💪 Other Ways to Help
 
 ### Sending Feedbacks & Reporting Bugs
@@ -164,7 +160,7 @@ If you had any issues, bugs, or want to share about your experience, feel free t
 
 ### Submitting New Ideas
 
-If you think AquaHub could use a new feature, please open an issue on our GitHub repository, stating as much information as you can think about your new idea and it's implications. We would also use this issue to gather more information, get more feedback from the community, and have a proper discussion about the new feature.
+If you think AquaHub could use a new feature, please open an [issue](https://github.com/AquaHubStudio/AquaHub/issues) on our GitHub repository, stating as much information as you can think about your new idea and it's implications. We would also use this issue to gather more information, get more feedback from the community, and have a proper discussion about the new feature.
 
 ### Improving Documentation
 
