@@ -11,7 +11,7 @@
 Our mission is to empower everyone to make their vision become reality. AquaHub provides a platform for new **and** experienced project founders to share their projects, connect with other like-minded people and celebrate their success with the community. Everyone on the platform can share their opinions and ideas with you to help you build the best project possible. We offer a **friendly and hate-free atmosphere** where everyone is welcome and everyone's opinion matters.
 
 ## 🚢 Connect with us
-- Join our 💻 [Discord](https://https://discord.gg/PDWbT7DkPU) for more information about updates and events.
+- Join our 💻 [Discord](https://discord.gg/PDWbT7DkPU) for more information about updates and events.
 - You can find our Roadmap [here]()
 
 ## 👷 Development Guide
