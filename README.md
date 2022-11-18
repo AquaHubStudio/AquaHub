@@ -17,4 +17,4 @@ Our mission is to empower everyone to make their vision become reality. AquaHub 
 ## 👷 Development Guide
 AquaHub is a community-driven project, and we appreciate every help we can get:
 - You can suggest new features or report bugs [here](https://github.com/AquaHubStudio/AquaHub/issues).
-- Please read the [contribution guide](Contributing.md) before contributing to the code.
+- Please read the [contribution guide](CONTRIBUTING.md) before contributing to the code.
