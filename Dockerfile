@@ -8,4 +8,5 @@ COPY . .
 
 EXPOSE 5173
 
-CMD yarn run build
+ENTRYPOINT [ "wait-for-server.sh" ]
+CMD yarn run build && yarn run preview
