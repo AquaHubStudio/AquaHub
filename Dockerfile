@@ -5,9 +5,9 @@ WORKDIR /app
 COPY ./package.json ./
 RUN yarn install
 COPY . .
+RUN yarn run build
+RUN yarn run preview
 
-EXPOSE 5173
+EXPOSE 4173
 
 ENTRYPOINT [ "wait-for-server.sh" ]
-RUN yarn run build
-CMD yarn run preview
