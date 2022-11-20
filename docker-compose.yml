@@ -3,22 +3,29 @@ services:
   app:
     container_name: aquahub_app
     build:
-      context: ..
-      dockerfile: .devcontainer/Dockerfile
+      context: .
+      dockerfile: Dockerfile
     environment:
       - APP_ENV=staging
       - APP_DEBUG=false
-      - VITE_SERVER_URL=
-      - VITE_REDIRECT_URL=
+      - VITE_BACKEND_URL
+      - VITE_PUBLIC_BACKEND_URL
+      - VITE_REDIRECT_URL
+      - BACKEND_ADMIN_EMAIL
+      - BACKEND_ADMIN_PASSWORD
+      - GOOGLE_CLIENT_ID
+      - GOOGLE_CLIENT_SECRET
+      - GITHUB_CLIENT_ID
+      - GITHUB_CLIENT_SECRET
     ports:
       - '5173:5173'
     volumes:
       - ..:/workspace:cached
       - vendor:/workspace/vendor:cached
-    depends_on: [server]
-    command: /workspace/wait-for-server.sh sleep infinity
+    depends_on: [backend]
+    command: ./wait-for-backend.sh sleep infinity
 
-  server:
+  backend:
     image: ghcr.io/muchobien/pocketbase:latest
     container_name: aquahub_pocketbase
     restart: unless-stopped
