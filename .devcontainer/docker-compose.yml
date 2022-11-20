@@ -8,7 +8,7 @@ services:
     environment:
       - APP_ENV=local
       - APP_DEBUG=true
-      - VITE_SERVER_URL=http://localhost:8090
+      - VITE_BACKEND_URL=http://localhost:8090
       - VITE_REDIRECT_URL=http://localhost:5173/redirect
     volumes:
       - ..:/workspace:cached
@@ -16,10 +16,10 @@ services:
       - ${HOME}${USERPROFILE:-}/.ssh:/root/.ssh
       - ${HOME}${USERPROFILE:-}/.gitconfig:/root/.gitconfig
       - ${HOME}${USERPROFILE:-}/.gitignore_global:/root/.gitignore_global
-    depends_on: [server]
+    depends_on: [backend]
     command: sleep infinity
 
-  server:
+  backend:
     image: ghcr.io/muchobien/pocketbase:latest
     container_name: aquahub_pocketbase
     restart: unless-stopped

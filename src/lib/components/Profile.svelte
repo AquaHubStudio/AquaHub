@@ -2,7 +2,7 @@
 	import { clickOutside } from '../helpers/clickOutside';
 	import PocketBase from 'pocketbase';
 
-	const db = new PocketBase(import.meta.env.VITE_SERVER_URL);
+	const db = new PocketBase(import.meta.env.VITE_BACKEND_URL);
 
 	let ddOpen = false;
 
