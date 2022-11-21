@@ -23,7 +23,6 @@ services:
       - ..:/workspace:cached
       - vendor:/workspace/vendor:cached
     depends_on: [backend]
-    # command: ./wait-for-backend.sh sleep infinity
 
   backend:
     image: ghcr.io/muchobien/pocketbase:latest
