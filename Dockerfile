@@ -20,8 +20,8 @@ COPY --from=0 /app/vite.config.ts .
 COPY --from=0 /app/package.json ./
 
 # Change line endings to LF
-RUN sed -i 's/\r$//' ./wait-for-backend.sh \
-    && chmod +x ./wait-for-backend.sh
+RUN sed -i 's/\r$//' wait-for-backend.sh \
+    && chmod +x wait-for-backend.sh
 
 ENTRYPOINT ./wait-for-backend.sh
 CMD ["node", "./build"]
