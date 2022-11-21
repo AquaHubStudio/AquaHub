@@ -18,6 +18,7 @@ COPY --from=0 /app/.svelte-kit/build ./build
 COPY --from=0 /app/svelte.config.js .
 COPY --from=0 /app/vite.config.ts .
 COPY --from=0 /app/package.json ./
+COPY --from=0 /app/wait-for-backend.sh ./
 
 # Change line endings to LF
 RUN ["sed -i 's/\r$//' $app/wait-for-backend.sh && chmod +x $app/wait-for-backend.sh"]
