@@ -19,5 +19,9 @@ COPY --from=0 /app/svelte.config.js .
 COPY --from=0 /app/vite.config.ts .
 COPY --from=0 /app/package.json ./
 
+# Change line endings to LF
+RUN sed -i 's/\r$//' ./wait-for-server.sh \
+    && chmod +x ./wait-for-server.sh
+
 ENTRYPOINT ./wait-for-server.sh
 CMD ["node", "./build"]
