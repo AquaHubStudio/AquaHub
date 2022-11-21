@@ -3,9 +3,9 @@ FROM node:18.12-alpine3.15
 WORKDIR /app
 
 COPY ./package.json ./
-RUN yarn install
-COPY . .
 RUN rm -rf node_modules && yarn install --frozen-lockfile
+COPY . .
+RUN yarn run build
 RUN echo "Build finished, next steps following.."
 
 FROM node:18.12-alpine3.15 as app
