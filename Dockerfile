@@ -5,6 +5,7 @@ WORKDIR /app
 COPY ./package.json ./
 RUN rm -rf node_modules && yarn install --frozen-lockfile
 COPY . .
+RUN echo "Build started"
 RUN yarn run build
 RUN echo "Build finished, next steps following.."
 
