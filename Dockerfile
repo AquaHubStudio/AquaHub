@@ -6,8 +6,6 @@ COPY ./package.json ./
 RUN yarn install
 COPY . .
 RUN yarn run build
-RUN yarn run preview
 
-EXPOSE 4173
-
-ENTRYPOINT [ "wait-for-server.sh" ]
+ENTRYPOINT [ "sh ./wait-for-server.sh" ]
+CMD ["yarn", "run", "preview"]
