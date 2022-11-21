@@ -19,5 +19,5 @@ COPY --from=0 /app/svelte.config.js .
 COPY --from=0 /app/vite.config.ts .
 COPY --from=0 /app/package.json ./
 
-ENTRYPOINT [ "sh ./wait-for-server.sh" ]
+ENTRYPOINT ./wait-for-server.sh
 CMD ["node", "./build"]
