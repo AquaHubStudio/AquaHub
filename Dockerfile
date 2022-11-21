@@ -21,7 +21,7 @@ COPY --from=0 /app/package.json ./
 COPY --from=0 /app/wait-for-backend.sh ./
 
 # Change line endings to LF
-RUN ["sed -i 's/\r$//' ./wait-for-backend.sh && chmod +x ./wait-for-backend.sh"]
+RUN ["sed -i 's/\r$//' wait-for-backend.sh && chmod +x wait-for-backend.sh"]
 
 ENTRYPOINT ./wait-for-backend.sh
 CMD ["node", "./build"]
