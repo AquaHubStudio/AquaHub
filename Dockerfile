@@ -10,8 +10,5 @@ RUN yarn run build
 # Change line endings to LF
 # RUN ["sed -i 's/\r$//' wait-for-backend.sh && chmod +x wait-for-backend.sh"]
 
-RUN mv wait-for-backend.sh /usr/bin/wait-for-backend.sh \
-    && chmod +x /usr/bin/wait-for-backend.sh
-
-ENTRYPOINT ["/usr/bin/wait-for-backend.sh"]
-CMD ["node", "./build"]
+# ENTRYPOINT ["/usr/bin/wait-for-backend.sh"]
+# CMD ["node", "./build"]

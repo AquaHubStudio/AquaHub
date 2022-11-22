@@ -23,6 +23,7 @@ services:
       - ..:/workspace:cached
       - vendor:/workspace/vendor:cached
     depends_on: [backend]
+    command: ['./wait-for-server.sh', 'node', './build']
 
   backend:
     image: ghcr.io/muchobien/pocketbase:latest
