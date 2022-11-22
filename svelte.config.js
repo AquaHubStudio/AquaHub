@@ -1,17 +1,15 @@
-import adapter from '@sveltejs/adapter-auto';
+import { sveltekit } from '@sveltejs/adapter-node';
 import preprocess from 'svelte-preprocess';
 
-/** @type {import('@sveltejs/kit').Config} */
+/** @type {import('vite').UserConfig} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
 	preprocess: preprocess({
-		postcss: true
+		postcss: true,
 	}),
-
-	kit: {
-		adapter: adapter()
-	}
+	plugins: [sveltekit()],
+	server: { port: 3000 },
 };
 
 export default config;
