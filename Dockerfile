@@ -1,6 +1,6 @@
 FROM node:18.12-alpine3.15
 
-WORKDIR /app
+WORKDIR /
 
 COPY package.json yarn.lock ./
 RUN rm -rf node_modules && yarn install --frozen-lockfile

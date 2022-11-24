@@ -26,10 +26,10 @@ echo "Backend started - initializing.."
 ADMIN_CREATE=$(curl -s -X POST -H "Content-Type: application/json" -d '{ "email": "'"${BACKEND_ADMIN_EMAIL}"'", "password": "'"${BACKEND_ADMIN_PASSWORD}"'", "passwordConfirm": "'"${BACKEND_ADMIN_PASSWORD}"'" }' "${VITE_BACKEND_URL}/api/admins" -w "%{http_code}")
 
 # Admin account already exists
-if [ $ADMIN_CREATE = "401" ]; then
+if [ $ADMIN_CREATE = '401' ]; then
   echo "(1/4) Admin account already exists - logging in..";
 # Error occu
-elif [ $ADMIN_CREATE != "200" ]; then
+elif [ $ADMIN_CREATE != '200' ]; then
   echo "Creating admin account failed with response:"
   echo $ADMIN_CREATE
   exit 1;
@@ -43,7 +43,7 @@ fi
 ADMIN_LOGIN=$(curl -s -X POST -H "Content-Type: application/json" -d '{ "identity": "'"${BACKEND_ADMIN_EMAIL}"'", "password": "'"${BACKEND_ADMIN_PASSWORD}"'" }' "${VITE_BACKEND_URL}/api/admins/auth-with-password")
 ADMIN_TOKEN=$(echo $ADMIN_LOGIN | jq -r '.token')
 
-if [ $ADMIN_TOKEN = "" ]; then
+if [ $ADMIN_TOKEN = '' ]; then
   echo "Failed admin account authentication with response:"
   echo $ADMIN_LOGIN
   exit 1;
@@ -76,20 +76,19 @@ SETTINGS='{
   },
   "googleAuth": {
     "enabled": true,
-    "clientId": "'"${GOOGLE_CLIENT_ID}"'"
+    "clientId": "'"${GOOGLE_CLIENT_ID}"'",
     "clientSecret": "'"${GOOGLE_CLIENT_SECRET}"'"
-  }
   },
   "githubAuth": {
     "enabled": true,
-    "clientId": "'"${GITHUB_CLIENT_ID}"'"
+    "clientId": "'"${GITHUB_CLIENT_ID}"'",
     "clientSecret": "'"${GITHUB_CLIENT_SECRET}"'"
   }
 }'
 
 UPDATE_SETTINGS=$(curl -s -X PATCH -H "Content-Type: application/json" -H "Authorization: ${ADMIN_TOKEN}" -d "$SETTINGS" "${VITE_BACKEND_URL}/api/settings" -o /dev/null -w "%{http_code}")
 
-if [ $UPDATE_SETTINGS != "200" ]; then
+if [ $UPDATE_SETTINGS != '200' ]; then
   echo "Failed to update settings with response:"
   echo $UPDATE_SETTINGS
   exit 1;
