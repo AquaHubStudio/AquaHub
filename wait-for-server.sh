@@ -11,7 +11,7 @@ apk add jq curl
 
 REQ=""
 # 404 means the server is responding, started and ready to reviece endpoints
-until [ REQ != "404" ]; do
+until [ REQ != "" ]; do
   REQ=$(curl -s -X GET "${VITE_SERVER_URL}" -w "%{http_code}")
   echo $REQ
   echo "Backend not yet started - waiting.."
