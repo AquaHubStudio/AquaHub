@@ -1,0 +1,30 @@
+{
+	"name": "AquaHub",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"settings": {
+		"terminal.integrated.profiles.linux": {
+			"zsh": {
+				"path": "/bin/zsh"
+			}
+		},
+		"terminal.integrated.defaultProfile.linux": "zsh",
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"files.insertFinalNewline": true,
+		"files.trimTrailingWhitespace": true
+	},
+	"extensions": [
+		"eamodio.gitlens",
+		"esbenp.prettier-vscode",
+		"ms-azuretools.vscode-docker",
+		"vscode.css-language-features",
+		"formulahendry.auto-rename-tag",
+		"bradlc.vscode-tailwindcss",
+		"svelte.svelte-vscode",
+		"ardenivanov.svelte-intellisense",
+		"meganrogge.template-string-converter"
+	],
+	"postCreateCommand": "yarn install"
+}

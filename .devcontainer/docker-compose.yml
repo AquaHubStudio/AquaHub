@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  app:
+    container_name: aquahub_app
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - VITE_BACKEND_URL=http://localhost:8090
+      - VITE_REDIRECT_URL=http://localhost:5173/redirect
+    volumes:
+      - ..:/workspace:cached
+      - vendor:/workspace/vendor:cached
+      - ${HOME}${USERPROFILE:-}/.ssh:/root/.ssh
+      - ${HOME}${USERPROFILE:-}/.gitconfig:/root/.gitconfig
+      - ${HOME}${USERPROFILE:-}/.gitignore_global:/root/.gitignore_global
+    depends_on: [backend]
+    command: sleep infinity
+
+  backend:
+    image: ghcr.io/muchobien/pocketbase:latest
+    container_name: aquahub_pocketbase
+    restart: unless-stopped
+    ports:
+      - '8090:8090'
+    volumes:
+      - ./data/db:/pb_data
+
+volumes:
+  vendor: null

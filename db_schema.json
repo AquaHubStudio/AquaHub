@@ -1,0 +1,50 @@
+[
+	{
+		"id": "_pb_users_auth_",
+		"name": "users",
+		"type": "auth",
+		"system": false,
+		"schema": [
+			{
+				"id": "users_name",
+				"name": "name",
+				"type": "text",
+				"system": false,
+				"required": false,
+				"unique": false,
+				"options": {
+					"min": null,
+					"max": null,
+					"pattern": ""
+				}
+			},
+			{
+				"id": "xegnqg8t",
+				"name": "avatar",
+				"type": "url",
+				"system": false,
+				"required": false,
+				"unique": false,
+				"options": {
+					"exceptDomains": [],
+					"onlyDomains": []
+				}
+			}
+		],
+		"listRule": "id = @request.auth.id",
+		"viewRule": "id = @request.auth.id",
+		"createRule": "",
+		"updateRule": "id = @request.auth.id",
+		"deleteRule": "id = @request.auth.id",
+		"options": {
+			"allowEmailAuth": false,
+			"allowOAuth2Auth": true,
+			"allowUsernameAuth": false,
+			"exceptEmailDomains": null,
+			"manageRule": null,
+			"minPasswordLength": 8,
+			"onlyEmailDomains": null,
+			"requireEmail": true
+		}
+	}
+]
