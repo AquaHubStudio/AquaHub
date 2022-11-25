@@ -8,11 +8,11 @@ services:
     environment:
       - APP_ENV=staging
       - APP_DEBUG=false
-      - VITE_BACKEND_URL
-      - VITE_PUBLIC_BACKEND_URL
+      - VITE_SERVER_URL
+      - VITE_PUBLIC_SERVER_URL
       - VITE_REDIRECT_URL
-      - BACKEND_ADMIN_EMAIL
-      - BACKEND_ADMIN_PASSWORD
+      - SERVER_ADMIN_EMAIL
+      - SERVER_ADMIN_PASSWORD
       - GOOGLE_CLIENT_ID
       - GOOGLE_CLIENT_SECRET
       - GITHUB_CLIENT_ID

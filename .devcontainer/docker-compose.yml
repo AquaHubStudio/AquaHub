@@ -8,7 +8,7 @@ services:
     environment:
       - APP_ENV=local
       - APP_DEBUG=true
-      - VITE_BACKEND_URL=http://localhost:8090
+      - VITE_SERVER_URL=http://localhost:8090
       - VITE_REDIRECT_URL=http://localhost:3000/redirect
     volumes:
       - ..:/workspace:cached
