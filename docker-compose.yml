@@ -1,0 +1,38 @@
+version: '3.7'
+services:
+  app:
+    container_name: aquahub_app_staging
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - APP_ENV=staging
+      - APP_DEBUG=false
+      - VITE_BACKEND_URL
+      - VITE_PUBLIC_BACKEND_URL
+      - VITE_REDIRECT_URL
+      - BACKEND_ADMIN_EMAIL
+      - BACKEND_ADMIN_PASSWORD
+      - GOOGLE_CLIENT_ID
+      - GOOGLE_CLIENT_SECRET
+      - GITHUB_CLIENT_ID
+      - GITHUB_CLIENT_SECRET
+    ports:
+      - '5200:3000'
+    volumes:
+      - ..:/app:cached
+      - vendor:/app/vendor:cached
+    depends_on: [backend]
+    # command: ['./wait-for-server.sh', 'node', './build']
+
+  backend:
+    image: ghcr.io/muchobien/pocketbase:latest
+    container_name: aquahub_server_staging
+    restart: unless-stopped
+    ports:
+      - '9090:8090'
+    volumes:
+      - ./data/db:/pb_data
+
+volumes:
+  vendor: null

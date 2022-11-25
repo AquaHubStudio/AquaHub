@@ -16,6 +16,7 @@
 		"@neoconfetti/svelte": "^1.0.0",
 		"@playwright/test": "1.25.0",
 		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-node": "^1.0.0-next.101",
 		"@sveltejs/kit": "next",
 		"@tailwindcss/line-clamp": "^0.4.2",
 		"@types/cookie": "^0.5.1",
@@ -40,6 +41,6 @@
 	"type": "module",
 	"dependencies": {
 		"material-icons": "^1.12.1",
-		"pocketbase": "^0.7.4"
+		"pocketbase": "^0.8.0"
 	}
 }

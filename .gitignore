@@ -10,6 +10,8 @@ node_modules
 .output
 
 .devcontainer/data/*
+data/*
 
 vendor
 .env
+yarn-error.log

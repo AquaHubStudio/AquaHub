@@ -3,8 +3,8 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import PocketBase from 'pocketbase';
-
-	const db = new PocketBase(import.meta.env.VITE_POCKETBASE_URL);
+  
+	const db = new PocketBase(import.meta.env.VITE_PUBLIC_BACKEND_URL);
 
 	if (browser) {
 		const authProvider = JSON.parse(window.localStorage.getItem('provider') || '{}');
@@ -12,22 +12,22 @@
 		if (!authProvider) {
 			goto('/');
 		} else {
-			db.users
-				.authViaOAuth2(
+			db.collection('users')
+				.authWithOAuth2(
 					authProvider.name,
 					$page.url.searchParams.get('code') || '',
 					authProvider.codeVerifier,
 					import.meta.env.VITE_REDIRECT_URL,
 				)
 				.then((signInRes) => {
-					db.records
-						.update('profiles', signInRes.user.profile?.id || '', {
+					db.collection('users')
+						.update(signInRes.record.id || '', {
 							name: signInRes.meta.name,
 							avatar: signInRes.meta.avatarUrl,
 						})
 						.then(() => {
 							// Update authStore after updated user
-							db.users.refresh();
+							db.collection('users').authRefresh();
 							goto('/');
 						});
 				});

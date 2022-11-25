@@ -7,10 +7,10 @@
 	<div class={`flex justify-between text-sm max-w-${maxWidth} m-auto`}>
 		<p>Copyright © 2022 AquaHub Studio</p>
 		<div class="flex gap-5">
-			<a href="/security">Security</a>
-			<a href="/terms">Terms and Conditions</a>
-			<a href="/privacy">Privacy</a>
-			<a href="/cookies">Cookies</a>
+			<a href="#">Security</a>
+			<a href="#">Terms and Conditions</a>
+			<a href="#">Privacy</a>
+			<a href="#">Cookies</a>
 		</div>
 	</div>
 </footer>
