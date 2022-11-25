@@ -3,7 +3,7 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import PocketBase from 'pocketbase';
-
+  
 	const db = new PocketBase(import.meta.env.VITE_PUBLIC_BACKEND_URL);
 
 	if (browser) {

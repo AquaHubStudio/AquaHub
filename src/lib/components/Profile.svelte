@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { clickOutside } from '../helpers/clickOutside';
 	import PocketBase from 'pocketbase';
-
+  
 	const db = new PocketBase(import.meta.env.VITE_PUBLIC_BACKEND_URL);
 
 	let ddOpen = false;
