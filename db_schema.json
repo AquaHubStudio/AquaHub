@@ -19,17 +19,15 @@
 				}
 			},
 			{
-				"id": "users_avatar",
+				"id": "xegnqg8t",
 				"name": "avatar",
-				"type": "file",
+				"type": "url",
 				"system": false,
 				"required": false,
 				"unique": false,
 				"options": {
-					"maxSelect": 1,
-					"maxSize": 5242880,
-					"mimeTypes": ["image/jpg", "image/jpeg", "image/png", "image/svg+xml", "image/gif"],
-					"thumbs": null
+					"exceptDomains": [],
+					"onlyDomains": []
 				}
 			}
 		],
