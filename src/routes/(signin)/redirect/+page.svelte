@@ -20,8 +20,8 @@
 					import.meta.env.VITE_REDIRECT_URL,
 				)
 				.then((signInRes) => {
-					db.collection('profiles')
-						.update(signInRes.user.profile?.id || '', {
+					db.collection('users')
+						.update(signInRes.record.id || '', {
 							name: signInRes.meta.name,
 							avatar: signInRes.meta.avatarUrl,
 						})
