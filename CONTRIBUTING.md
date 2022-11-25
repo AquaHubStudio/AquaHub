@@ -43,9 +43,11 @@ $ git pull
 $ git checkout -b [name_of_your_new_branch]
 ```
 
-5. Work - commit - repeat ( be sure to be in your branch )
+5. Start your server with `yarn run dev`. (Runs on [http://localhost:3000](http://localhost:3000))
 
-6. If you're ready to create a **Pull Request** check out [📥 Pull Request Policy](#-pull-request-policy)
+6. Work - commit - repeat ( be sure to be in your branch )
+
+7. If you're ready to create a **Pull Request** check out [📥 Pull Request Policy](#-pull-request-policy)
 
 ## ⚙️ Configure Backend (PocketBase)
 
