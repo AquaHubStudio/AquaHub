@@ -22,10 +22,9 @@ services:
     volumes:
       - ..:/app:cached
       - vendor:/app/vendor:cached
-    depends_on: [backend]
-    # command: ['./wait-for-server.sh', 'node', './build']
+    depends_on: [server]
 
-  backend:
+  server:
     image: ghcr.io/muchobien/pocketbase:latest
     container_name: aquahub_server_staging
     restart: unless-stopped
