@@ -8,7 +8,7 @@
 	const providerCap = provider[0].toUpperCase() + provider.substr(1).toLowerCase();
 
 	const redirectSignIn = async () => {
-		const { authProviders } = await db.users.listAuthMethods();
+		const { authProviders } = await db.collection('users').listAuthMethods();
 		authProviders.forEach(function (method) {
 			if (method.name == provider) {
 				localStorage.setItem('provider', JSON.stringify(method));
