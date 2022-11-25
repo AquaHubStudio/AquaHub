@@ -4,7 +4,7 @@
 
 	export let provider: 'google' | 'github';
 
-	const db = new PocketBase(import.meta.env.VITE_BACKEND_URL);
+	const db = new PocketBase(import.meta.env.VITE_PUBLIC_BACKEND_URL);
 	const providerCap = provider[0].toUpperCase() + provider.substr(1).toLowerCase();
 
 	const redirectSignIn = async () => {
