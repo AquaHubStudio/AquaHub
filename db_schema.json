@@ -59,7 +59,7 @@
 				"type": "text",
 				"system": false,
 				"required": true,
-				"unique": false,
+				"unique": true,
 				"options": {
 					"min": null,
 					"max": null,
@@ -87,12 +87,26 @@
 				"required": true,
 				"unique": false,
 				"options": {}
+			},
+			{
+				"id": "pbddraeg",
+				"name": "avatar",
+				"type": "file",
+				"system": false,
+				"required": false,
+				"unique": false,
+				"options": {
+					"maxSelect": 1,
+					"maxSize": 5242880,
+					"mimeTypes": ["image/jpg", "image/jpeg", "image/png", "image/svg+xml", "image/gif"],
+					"thumbs": []
+				}
 			}
 		],
-		"listRule": null,
-		"viewRule": null,
-		"createRule": null,
-		"updateRule": null,
+		"listRule": "@request.auth.id != \"\"",
+		"viewRule": "@request.auth.id != \"\"",
+		"createRule": "@request.auth.id != \"\"",
+		"updateRule": "@request.auth.id != \"\"",
 		"deleteRule": null,
 		"options": {}
 	}
