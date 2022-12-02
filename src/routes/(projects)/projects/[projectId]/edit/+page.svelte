@@ -4,7 +4,6 @@
 	import type { PageData } from '../$types';
 
 	export let data: PageData;
-	console.log(data);
 
 	const projectId = data.params?.projectId ?? '';
 	const projectData: { [key: string]: any } | any = data.projectData;
