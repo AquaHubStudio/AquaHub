@@ -1,5 +1,10 @@
 <script lang="ts">
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
+	import type { Record } from 'pocketbase';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+	const projects = data.items;
 </script>
 
 <svelte:head>
@@ -7,7 +12,6 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<!-- <div class="grid grid-cols-projects grid-rows-projects p-24" /> -->
 <section class="m-auto max-w-projects">
 	<div class="m-4 flex gap-3">
 		<div class="relative w-1/4">
@@ -23,40 +27,16 @@
 	</div>
 
 	<div class="grid grid-cols-projects grid-rows-projects">
-		<ProjectCard
-			id="cl123"
-			image="https://picsum.photos/200"
-			title="Test Title"
-			description="Some description for this project so lets type here some more text and hope for the best. I try to write even longer description. I need to find the matching best length."
-			tags={[{ title: 'Tag1' }, { title: 'Tag2' }]}
-		/>
-		<ProjectCard
-			id="cl123"
-			image="https://picsum.photos/200"
-			title="Test Title"
-			description="Some description for this project so lets type here some more text and hope for the best. I try to write even longer description. I need to find the matching best length."
-			tags={[{ title: 'Tag1' }, { title: 'Tag2' }]}
-		/>
-		<ProjectCard
-			id="cl123"
-			image="https://picsum.photos/200"
-			title="Test Title"
-			description="Some description for this project so lets type here some more text and hope for the best. I try to write even longer description. I need to find the matching best length."
-			tags={[{ title: 'Tag1' }, { title: 'Tag2' }]}
-		/>
-		<ProjectCard
-			id="cl123"
-			image="https://picsum.photos/200"
-			title="Test Title"
-			description="Some description for this project so lets type here some more text and hope for the best. I try to write even longer description. I need to find the matching best length."
-			tags={[{ title: 'Tag1' }, { title: 'Tag2' }]}
-		/>
-		<ProjectCard
-			id="cl123"
-			image="https://picsum.photos/200"
-			title="Test Title"
-			description="Some description for this project so lets type here some more text and hope for the best. I try to write even longer description. I need to find the matching best length."
-			tags={[{ title: 'Tag1' }, { title: 'Tag2' }]}
-		/>
+		{#each projects as project}
+			<ProjectCard
+				id={project.id}
+				image={project.avatar
+					? `${import.meta.env.VITE_PUBLIC_SERVER_URL}/api/files/projects/${project.id}/${project.avatar}`
+					: null}
+				title={project.title}
+				description={project.description}
+				tags={project.tags}
+			/>
+		{/each}
 	</div>
 </section>
