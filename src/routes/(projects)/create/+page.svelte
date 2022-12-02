@@ -1,13 +1,18 @@
 <script lang="ts">
-	let avatar = '';
+	import { goto } from '$app/navigation';
+	import PocketBase from 'pocketbase';
+
+	let avatar: Blob;
 	let title = '';
 	let description = '';
 	let tag = '';
 	let tags: string[] = [];
-	let error: { field: string; message: string };
+	let errors: { field: string; message: string }[] = [];
 
-	const handleAvatar = (e) => {
-		avatar = URL.createObjectURL(e.target.files[0]);
+	const db = new PocketBase(import.meta.env.VITE_PUBLIC_SERVER_URL);
+
+	const handleAvatar = (e: any) => {
+		avatar = e.target.files[0];
 	};
 
 	const handleAddTag = () => {
@@ -26,13 +31,36 @@
 		tags = tags;
 	};
 
-	const handleSubmit = () => {
-		let formData = new FormData();
+	const handleSubmit = async () => {
+		const formData = new FormData();
 
-		formData.append('title', title);
-		formData.append('title', title);
-		formData.append('description', description);
-		formData.append('tags', JSON.stringify(tags));
+		// Validate inputs
+		if (!title) {
+			errors.push({ field: 'title', message: 'This field is required' });
+			errors = errors;
+		}
+		if (tags.length === 0) {
+			errors.push({ field: 'tags', message: 'At least one tag is required' });
+			errors = errors;
+		}
+
+		// Send request when no errors
+		if (errors.length === 0) {
+			formData.append('avatar', avatar);
+			formData.append('title', title);
+			formData.append('description', description);
+			formData.append('tags', JSON.stringify(tags));
+
+			try {
+				const project = await db.collection('projects').create(formData);
+				goto(`/projects/${project.id}`);
+			} catch (err: any) {
+				for (const [key, value] of Object.entries(err.data.data)) {
+					errors.push({ field: key, message: value.message });
+					errors = errors;
+				}
+			}
+		}
 	};
 </script>
 
@@ -51,7 +79,7 @@
 			>
 				<div class="flex flex-col items-center justify-center pt-5 pb-5">
 					{#if avatar}
-						<img src={avatar} alt="Project avatar preview" class="absolute h-60 w-60 rounded-lg" />
+						<img src={URL.createObjectURL(avatar)} alt="Project avatar preview" class="absolute h-60 w-60 rounded-lg" />
 					{:else}
 						<svg
 							aria-hidden="true"
@@ -88,8 +116,18 @@
 						placeholder="What's the title of your project?"
 						maxlength="50"
 						bind:value={title}
+						on:input={() => {
+							const errorObj = errors.find((err) => err.field === 'title');
+							if (errors && errorObj) {
+								errors.splice(errors.indexOf(errorObj), 1);
+								errors = errors;
+							}
+						}}
 					/>
 				</div>
+				{#if errors?.find((err) => err.field === 'title')}
+					<p class="error">{errors?.find((err) => err.field === 'title')?.message}</p>
+				{/if}
 			</div>
 			<div class="mb-2">
 				<label class="text-gray mb-1 flex text-xs font-bold uppercase tracking-wide">
@@ -116,9 +154,28 @@
 						maxlength="20"
 						disabled={tags.length >= 4}
 						bind:value={tag}
-						on:keydown={(e) => (e.key === 'Enter' ? handleAddTag() : '')}
+						on:keydown={(e) => {
+							if (e.key === 'Enter') {
+								const errorObj = errors.find((err) => err.field === 'tags');
+								if (errors && errorObj) {
+									errors.splice(errors.indexOf(errorObj), 1);
+									errors = errors;
+								}
+								handleAddTag();
+							}
+						}}
+						on:input={() => {
+							const errorObj = errors.find((err) => err.field === 'tags');
+							if (errors && errorObj) {
+								errors.splice(errors.indexOf(errorObj), 1);
+								errors = errors;
+							}
+						}}
 					/>
 				</div>
+				{#if errors?.find((err) => err.field === 'tags')}
+					<p class="error">{errors?.find((err) => err.field === 'tags')?.message}</p>
+				{/if}
 			</div>
 			<div>
 				{#each tags as tag}
@@ -133,12 +190,18 @@
 		</div>
 	</div>
 	<div class="mt-2 flex w-full justify-end">
-		<button type="submit" class="rounded bg-primary px-5 py-2 duration-200 hover:bg-opacity-80">Create</button>
+		<button type="submit" class="rounded bg-primary px-5 py-2 duration-200 hover:bg-opacity-80" on:click={handleSubmit}
+			>Create</button
+		>
 	</div>
 </section>
 
 <style>
 	.projectDetail {
 		@apply block w-full appearance-none rounded border py-3 px-4 leading-tight focus:outline-none disabled:bg-gray-300;
+	}
+
+	.error {
+		@apply py-0.5 text-xs text-red-400;
 	}
 </style>
