@@ -101,6 +101,19 @@
 					"mimeTypes": ["image/jpg", "image/jpeg", "image/png", "image/svg+xml", "image/gif"],
 					"thumbs": []
 				}
+			},
+			{
+				"id": "seaqzsoa",
+				"name": "manager",
+				"type": "relation",
+				"system": false,
+				"required": true,
+				"unique": false,
+				"options": {
+					"maxSelect": 1,
+					"collectionId": "_pb_users_auth_",
+					"cascadeDelete": false
+				}
 			}
 		],
 		"listRule": "@request.auth.id != \"\"",
