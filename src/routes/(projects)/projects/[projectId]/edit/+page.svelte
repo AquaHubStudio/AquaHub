@@ -1,18 +1,28 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import PocketBase from 'pocketbase';
+	import PocketBase, { Record } from 'pocketbase';
+	import type { PageData } from '../$types';
 
-	let avatar: Blob;
-	let title = '';
-	let description = '';
+	export let data: PageData;
+
+	const projectId = data.params?.projectId ?? '';
+	const projectData: { [key: string]: any } | any = data.projectData;
+
+	let avatar =
+		projectData.avatar &&
+		`${import.meta.env.VITE_PUBLIC_SERVER_URL}/api/files/projects/${projectData.id}/${projectData.avatar}`;
+	let avatarRaw: Blob;
+	let title = projectData.title ?? '';
+	let description = projectData.description ?? '';
 	let tag = '';
-	let tags: string[] = [];
+	let tags: string[] = projectData.tags ?? [];
 	let errors: { field: string; message: string }[] = [];
 
 	const db = new PocketBase(import.meta.env.VITE_PUBLIC_SERVER_URL);
 
 	const handleAvatar = (e: any) => {
-		avatar = e.target.files[0];
+		avatar = URL.createObjectURL(e.target.files[0]);
+		avatarRaw = e.target.files[0];
 	};
 
 	const handleAddTag = () => {
@@ -46,14 +56,13 @@
 
 		// Send request when no errors
 		if (errors.length === 0) {
-			formData.append('avatar', avatar);
+			formData.append('avatar', avatarRaw);
 			formData.append('title', title);
 			formData.append('description', description);
 			formData.append('tags', JSON.stringify(tags));
-			formData.append('manager', db.authStore.model?.id ?? '');
 
 			try {
-				const project = await db.collection('projects').create(formData);
+				const project = await db.collection('projects').update(projectId, formData);
 				goto(`/projects/${project.id}`);
 			} catch (err: any) {
 				for (const [key, value] of Object.entries(err.data.data)) {
@@ -80,7 +89,7 @@
 			>
 				<div class="flex flex-col items-center justify-center pt-5 pb-5">
 					{#if avatar}
-						<img src={URL.createObjectURL(avatar)} alt="Project avatar preview" class="absolute h-60 w-60 rounded-lg" />
+						<img src={avatar} alt="Project avatar preview" class="absolute h-60 w-60 rounded-lg" />
 					{:else}
 						<svg
 							aria-hidden="true"
@@ -192,7 +201,7 @@
 	</div>
 	<div class="mt-2 flex w-full justify-end">
 		<button type="submit" class="rounded bg-primary px-5 py-2 duration-200 hover:bg-opacity-80" on:click={handleSubmit}
-			>Create</button
+			>Save</button
 		>
 	</div>
 </section>
