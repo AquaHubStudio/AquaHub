@@ -23,7 +23,7 @@
 			{#each tags as tag}
 				<p class={`flex items-center gap-1 text-xs rounded-full px-3 py-0.5 text-gray-700 bg-gray-200`}>
 					<span class="material-icons-round text-xs">sell</span>
-					{tag.title}
+					{tag}
 				</p>
 			{/each}
 		</div>
