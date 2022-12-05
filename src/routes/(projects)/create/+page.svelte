@@ -50,6 +50,7 @@
 			formData.append('title', title);
 			formData.append('description', description);
 			formData.append('tags', JSON.stringify(tags));
+			formData.append('manager', db.authStore.model.id);
 
 			try {
 				const project = await db.collection('projects').create(formData);
