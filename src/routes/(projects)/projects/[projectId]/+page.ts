@@ -8,6 +8,8 @@ export const ssr = false;
 const db = new PocketBase(import.meta.env.VITE_PUBLIC_SERVER_URL);
 
 export const load: Load = async ({ params }) => {
-	const projectData: Record = await db.collection('projects').getOne(params.projectId ?? '');
+	const projectData: Record = await db.collection('projects').getOne(params.projectId ?? '', {
+		expand: 'manager',
+	});
 	return { params, projectData };
 };

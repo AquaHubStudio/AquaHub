@@ -24,6 +24,12 @@
 				<div class="h-60 w-60 rounded-md bg-gray-300" />
 			{/if}
 			<p class="mt-2 text-center text-lg">{projectData.title}</p>
+			<p class="mt-2 text-center text-lg">
+				Manager: <a
+					class="text-blue-300 underline duration-100 hover:text-primary"
+					href={`/users/${projectData.expand.manager.id}`}>{projectData.expand.manager.name}</a
+				>
+			</p>
 		</div>
 		<div class="w-2/3">
 			<div class="mb-2">
