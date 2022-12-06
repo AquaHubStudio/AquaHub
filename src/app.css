@@ -4,5 +4,5 @@
 @tailwind utilities;
 
 body {
-	@apply bg-gray-200 h-full w-full;
+	@apply h-full w-full bg-gray-200;
 }
