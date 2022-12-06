@@ -7,7 +7,6 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<!-- <div class="grid grid-cols-projects grid-rows-projects p-24" /> -->
 <section class="m-auto max-w-landing">
 	<div class="flex h-[calc(90vh-64px)] w-full flex-col items-center justify-center text-center">
 		<h1

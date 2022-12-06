@@ -12,7 +12,7 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section class="m-auto max-w-projects">
+<section class="m-auto max-w-main">
 	<div class="m-4 flex gap-3">
 		<div class="relative w-1/4">
 			<div class="absolute ml-2 flex h-full items-center">

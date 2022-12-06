@@ -5,9 +5,9 @@
 </script>
 
 <div class="app">
-	<Header maxWidth="projects" />
+	<Header maxWidth="main" />
 	<main>
 		<slot />
 	</main>
-	<Footer maxWidth="projects" />
+	<Footer maxWidth="main" />
 </div>

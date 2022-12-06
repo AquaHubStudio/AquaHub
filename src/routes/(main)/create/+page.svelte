@@ -70,7 +70,6 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<!-- <div class="grid grid-cols-projects grid-rows-projects p-24" /> -->
 <section class="m-auto mt-8 max-w-5xl">
 	<div class="flex justify-between">
 		<div class="flex w-1/3">

@@ -11,7 +11,7 @@
 		{#if image}
 			<img src={image} alt="Project logo" class="h-20 w-20 rounded-md" />
 		{:else}
-			<div class="h-20 w-20 rounded-md bg-gray-300" />
+			<div class="min-h-[80px] min-w-[80px] rounded-md bg-gray-300" />
 		{/if}
 		<div class="px-4 text-start">
 			<p class="text-md font-semibold">{title}</p>
