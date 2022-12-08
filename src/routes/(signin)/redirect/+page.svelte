@@ -36,7 +36,7 @@
 </script>
 
 <svelte:head>
-	<title>Redirect</title>
+	<title>Login Redirect - AquaHub</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 

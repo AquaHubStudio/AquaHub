@@ -66,7 +66,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Create Project - AquaHub</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
