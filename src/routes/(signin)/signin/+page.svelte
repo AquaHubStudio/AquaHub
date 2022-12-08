@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Sign in</title>
+	<title>Sign In - AquaHub</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 

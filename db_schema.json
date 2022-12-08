@@ -31,11 +31,11 @@
 				}
 			}
 		],
-		"listRule": "id = @request.auth.id",
-		"viewRule": "id = @request.auth.id",
+		"listRule": "",
+		"viewRule": "",
 		"createRule": "",
-		"updateRule": "id = @request.auth.id",
-		"deleteRule": "id = @request.auth.id",
+		"updateRule": "@request.auth.id = id",
+		"deleteRule": "@request.auth.id = id",
 		"options": {
 			"allowEmailAuth": false,
 			"allowOAuth2Auth": true,
@@ -116,11 +116,11 @@
 				}
 			}
 		],
-		"listRule": "@request.auth.id != \"\"",
-		"viewRule": "@request.auth.id != \"\"",
+		"listRule": "",
+		"viewRule": "",
 		"createRule": "@request.auth.id != \"\"",
 		"updateRule": "@request.auth.id != \"\"",
-		"deleteRule": null,
+		"deleteRule": "@request.auth.id != \"\"",
 		"options": {}
 	}
 ]
