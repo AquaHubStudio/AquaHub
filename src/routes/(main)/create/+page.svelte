@@ -50,7 +50,7 @@
 			formData.append('title', title);
 			formData.append('description', description);
 			formData.append('tags', JSON.stringify(tags));
-			formData.append('manager', db.authStore.model?.id ?? '');
+			formData.append('manager', db.authStore.model.id);
 
 			try {
 				const project = await db.collection('projects').create(formData);
@@ -66,11 +66,10 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Create Project - AquaHub</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<!-- <div class="grid grid-cols-projects grid-rows-projects p-24" /> -->
 <section class="m-auto mt-8 max-w-5xl">
 	<div class="flex justify-between">
 		<div class="flex w-1/3">
