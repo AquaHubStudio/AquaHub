@@ -1,6 +1,5 @@
 <script>
-	import Logo from '$lib/components/Logo.svelte';
-	import OAuthElement from './OAuthElement.svelte';
+	import OAuthElement from '$lib/components/OAuthElement.svelte';
 </script>
 
 <svelte:head>
