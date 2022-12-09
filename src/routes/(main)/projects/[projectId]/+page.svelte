@@ -27,7 +27,7 @@
 			<p class="mt-2 text-center text-lg">
 				Manager: <a
 					class="text-blue-300 underline duration-100 hover:text-primary"
-					href={`/users/${projectData.expand.manager.id}`}>{projectData.expand.manager.name}</a
+					href={`/users/${projectData.expand.manager.id}`}>{projectData.expand.manager.username}</a
 				>
 			</p>
 		</div>
