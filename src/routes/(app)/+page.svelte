@@ -15,34 +15,34 @@
 			One Hub. Every Project.
 		</h1>
 		<h5 class="text-xl italic text-gray-600">
-			Share your project. Connect with like-minded founders. Track your progress (coming soon).
+			Share your projects. Connect with like-minded founders. Track your progress (coming soon).
 		</h5>
 		<div class="m-4 flex gap-4">
 			<a href="/discover" class="CtA-btn bg-gray-300 text-black hover:bg-gray-400 hover:bg-opacity-50">
 				<span class="material-icons-outlined">explore</span>
 				Discover
 			</a>
-			<a href="#" class="CtA-btn bg-indigo-500 text-white hover:bg-indigo-600">
+			<a href="/create" class="CtA-btn bg-indigo-500 text-white hover:bg-indigo-600">
 				<span class="material-icons-round">add</span>
 				Create
 			</a>
 		</div>
 	</div>
 	<FeatureDescription
-		image="https://picsum.photos/400"
+		image="../../assets/landing/discover.svg"
 		title="Discover projects from others"
-		description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam repellendus, hic cum magnam praesentium rem quis nisi. Nostrum minus id numquam eius alias eaque quibusdam. Suscipit repellat incidunt amet modi."
+		description="Dive into the paradise of projects and discover many awesome and exciting projects currently going on. Check out your competition but also cheer up each other."
 	/>
 	<FeatureDescription
-		image="https://picsum.photos/400"
+		image="../../assets/landing/connect.svg"
 		title="Connect with like-minded people"
-		description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam repellendus, hic cum magnam praesentium rem quis nisi. Nostrum minus id numquam eius alias eaque quibusdam. Suscipit repellat incidunt amet modi."
+		description="The perfect place to meet founders from all over the world. Get in touch with like-minded people and hopefully find your next business partner. Also get the chance to hire interested people to help out your project (coming soon)."
 		reversed
 	/>
 	<FeatureDescription
-		image="https://picsum.photos/400"
+		image="../../assets/landing/progress.svg"
 		title="Track your progress (coming soon)"
-		description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam repellendus, hic cum magnam praesentium rem quis nisi. Nostrum minus id numquam eius alias eaque quibusdam. Suscipit repellat incidunt amet modi."
+		description="Not only get in touch with others and share your project you are working on currently but also track your progress. Have access to helpful tools to make your life as a project manager easier."
 	/>
 </section>
 
