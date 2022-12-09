@@ -10,9 +10,16 @@ const db = new PocketBase(import.meta.env.VITE_PUBLIC_SERVER_URL);
 
 export const load: Load = async ({ params }) => {
 	const projectData: Record = await db.collection('projects').getOne(params.projectId ?? '');
+	const userValid = db.authStore.isValid;
 	const user = db.authStore.model;
 
-	// User is not project manager
+	// User not logged in
+	if (!userValid) {
+		goto('/signin');
+		return;
+	}
+
+	// User not project manager
 	if (projectData.manager.id !== db.authStore.model.id) {
 		goto(`/projects/${projectData.id}`);
 		return;
