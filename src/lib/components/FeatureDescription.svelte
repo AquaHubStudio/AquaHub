@@ -5,9 +5,9 @@
 	export let description: string;
 </script>
 
-<div class="mx-12 mb-16">
+<div class="mx-12 mb-24">
 	<div class={`flex ${reversed ? 'flex-row-reverse' : ''} items-center justify-between gap-24`}>
-		<img src={image} alt="Example" />
+		<img src={image} alt="Example" class="w-1/3" />
 		<div>
 			<h3
 				class="mb-2 w-fit bg-gradient-to-r from-blue-400 to-violet-600 bg-clip-text text-4xl font-extrabold text-transparent"
