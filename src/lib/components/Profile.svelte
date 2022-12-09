@@ -17,10 +17,10 @@
 		}
 	};
 
-	const logout = () => {
+	const logout = async () => {
 		db.authStore.clear();
+		await goto('/');
 		location.reload();
-		goto('/');
 	};
 </script>
 
