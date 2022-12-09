@@ -12,7 +12,7 @@ export const load: PageLoad = async () => {
 
 	// User needs to be logged in
 	if (!user) {
-		goto('/');
+		goto('/signin');
 		return;
 	}
 
