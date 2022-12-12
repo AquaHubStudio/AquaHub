@@ -7,9 +7,9 @@
 	const db = new PocketBase(import.meta.env.VITE_PUBLIC_SERVER_URL);
 
 	if (browser) {
-		const authProvider = JSON.parse(window.localStorage.getItem('provider') || '{}');
+		const authProvider = JSON.parse(localStorage.getItem('provider') || '{}');
 		localStorage.removeItem('provider');
-		if (!authProvider) {
+		if (!authProvider.codeVerifier) {
 			goto('/');
 		} else {
 			db.collection('users')

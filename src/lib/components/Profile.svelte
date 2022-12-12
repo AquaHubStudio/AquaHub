@@ -29,7 +29,12 @@
 		<div class="relative text-left" use:clickOutside on:click_outside={handleDdOutsideClick}>
 			<div class="flex items-center">
 				{#if db.authStore.model?.avatar}
-					<img src={db.authStore.model.avatar} alt="Profile avatar" class="h-8 w-8 rounded-full" />
+					<img
+						src={db.authStore.model.avatar}
+						referrerpolicy="no-referrer"
+						alt="Profile avatar"
+						class="h-8 w-8 rounded-full"
+					/>
 				{:else}
 					<img src="/assets/no-avatar.svg" alt="Profile avatar" class="h-8 w-8 rounded-full" />
 				{/if}

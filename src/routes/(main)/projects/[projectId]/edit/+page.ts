@@ -20,7 +20,7 @@ export const load: Load = async ({ params }) => {
 	}
 
 	// User not project manager
-	if (projectData.manager.id !== db.authStore.model.id) {
+	if (projectData.manager !== db.authStore.model.id) {
 		goto(`/projects/${projectData.id}`);
 		return;
 	}

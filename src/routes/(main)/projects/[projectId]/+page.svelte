@@ -1,5 +1,8 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import PocketBase from 'pocketbase';
+
+	const db = new PocketBase(import.meta.env.VITE_PUBLIC_BACKEND_URL);
 
 	export let data: PageData;
 	const projectId = data.params.projectId;
@@ -11,9 +14,9 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section class="m-auto mt-8 max-w-5xl">
-	<div class="flex justify-between">
-		<div class="flex w-1/3 flex-col items-center">
+<section class="m-auto max-w-5xl p-8">
+	<div class="flex flex-col items-center gap-4 md:flex-row md:items-start md:justify-between">
+		<div class="flex w-full flex-col items-center md:w-1/3">
 			{#if projectData.avatar}
 				<img
 					src={`${import.meta.env.VITE_PUBLIC_SERVER_URL}/api/files/projects/${projectData.id}/${projectData.avatar}`}
@@ -30,8 +33,16 @@
 					href={`/users/${projectData.expand.manager.id}`}>{projectData.expand.manager.username}</a
 				>
 			</p>
+			{#if projectData.manager === db.authStore.model.id}
+				<a
+					href={`/projects/${projectData.id}/edit`}
+					class="right-4 my-4 flex items-center gap-2 rounded-md bg-primary px-3 py-1.5 text-sm text-white"
+				>
+					<span class="material-icons-outlined text-base">edit</span> Edit
+				</a>
+			{/if}
 		</div>
-		<div class="w-2/3">
+		<div class="w-full md:w-2/3">
 			<div class="mb-2">
 				<div class="flex justify-between">
 					<p class="projectDetail">{projectData.description}</p>
