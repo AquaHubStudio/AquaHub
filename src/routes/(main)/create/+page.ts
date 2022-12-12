@@ -4,6 +4,7 @@ import type { PageLoad } from './$types';
 
 export const prerender = true;
 // export const csr = false;
+export const ssr = false;
 
 const db = new PocketBase(import.meta.env.VITE_PUBLIC_SERVER_URL);
 

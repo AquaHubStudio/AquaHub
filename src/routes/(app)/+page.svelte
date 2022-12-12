@@ -7,16 +7,16 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section class="m-auto max-w-landing">
+<section class="m-auto max-w-landing px-10">
 	<div class="flex h-[calc(90vh-64px)] w-full flex-col items-center justify-center text-center">
 		<h1
-			class="bg-gradient-to-r from-blue-400 to-violet-600 bg-clip-text text-8xl font-bold leading-tight text-transparent"
+			class="bg-gradient-to-r from-blue-400 to-violet-600 bg-clip-text text-5xl font-bold leading-tight text-transparent sm:text-7xl md:text-8xl"
 		>
 			One Hub. Every Project.
 		</h1>
-		<h5 class="text-xl italic text-gray-600">
+		<p class="text-base italic text-gray-600 sm:text-lg md:text-xl">
 			Share your projects. Connect with like-minded founders. Track your progress (coming soon).
-		</h5>
+		</p>
 		<div class="m-4 flex gap-4">
 			<a href="/discover" class="CtA-btn bg-gray-300 text-black hover:bg-gray-400 hover:bg-opacity-50">
 				<span class="material-icons-outlined">explore</span>

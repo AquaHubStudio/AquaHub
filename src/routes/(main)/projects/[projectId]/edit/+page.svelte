@@ -80,12 +80,12 @@
 </svelte:head>
 
 <!-- <div class="grid grid-cols-projects grid-rows-projects p-24" /> -->
-<section class="m-auto mt-8 max-w-5xl">
-	<div class="flex justify-between">
-		<div class="flex w-1/3">
+<section class="m-auto max-w-5xl p-8">
+	<div class="flex flex-col justify-between md:flex-row">
+		<div class="m-auto flex w-full justify-center md:w-1/3">
 			<label
 				for="dropzone-file"
-				class="ml-auto mr-12 flex h-60 w-60 cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-300 dark:border-gray-600 "
+				class="mr-12 flex h-60 w-60 cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-300 dark:border-gray-600 "
 			>
 				<div class="flex flex-col items-center justify-center pt-5 pb-5">
 					{#if avatar}
@@ -115,7 +115,7 @@
 				<input id="dropzone-file" type="file" class="hidden" on:change={handleAvatar} />
 			</label>
 		</div>
-		<div class="w-2/3">
+		<div class="mt-5 w-full md:mt-0 md:w-2/3">
 			<div class="mb-2">
 				<label class="text-gray mb-1 flex text-xs font-bold uppercase tracking-wide">
 					<span class="mr-1.5">Title</span>

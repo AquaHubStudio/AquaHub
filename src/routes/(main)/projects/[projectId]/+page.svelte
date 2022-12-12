@@ -11,9 +11,9 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section class="m-auto mt-8 max-w-5xl">
-	<div class="flex justify-between">
-		<div class="flex w-1/3 flex-col items-center">
+<section class="m-auto max-w-5xl p-8">
+	<div class="flex flex-col items-center gap-4 md:flex-row md:items-start md:justify-between">
+		<div class="flex w-full flex-col items-center md:w-1/3">
 			{#if projectData.avatar}
 				<img
 					src={`${import.meta.env.VITE_PUBLIC_SERVER_URL}/api/files/projects/${projectData.id}/${projectData.avatar}`}
@@ -31,7 +31,7 @@
 				>
 			</p>
 		</div>
-		<div class="w-2/3">
+		<div class="mt-5 w-full md:mt-0 md:w-2/3">
 			<div class="mb-2">
 				<div class="flex justify-between">
 					<p class="projectDetail">{projectData.description}</p>
